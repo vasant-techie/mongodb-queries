@@ -1,0 +1,16 @@
+{
+  "$expr": {
+    "$gt": [
+      {
+        "$size": {
+          "$filter": {
+            "input": { "$objectToArray": "$$ROOT" },
+            "as": "field",
+            "cond": { "$eq": [ "$$field.v", "specificValue" ] }
+          }
+        }
+      },
+      0
+    ]
+  }
+}
